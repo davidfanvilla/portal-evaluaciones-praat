@@ -3,7 +3,7 @@
 ## Contenido
 
 - `index.html`: portal completo y editable. La portada muestra tres formatos: evaluación de vuelo del alumno, supervisión del instructor en simulador y observación de buenas prácticas del instructor de teoría.
-- `praat-logo.jpg`: logotipo de PRAAT.
+- `praat-logo.jpg`: logotipo de PRAAT.`n- `ejemplo-dashboard.html`: vista completa de demostración del dashboard con datos ficticios, sin persistencia.
 
 El dashboard reúne teoría y simulador bajo el campo **Instructor evaluado** y muestra resultados y gráficas por sección. Solo presenta evaluaciones completas: todos los datos del formato y todas las calificaciones. En teoría, `N/O` cuenta como respuesta y se excluye del cálculo ponderado. Los borradores se pueden reanudar desde **Continuar borradores**. La evaluación del alumno se muestra aparte del resultado docente.
 
