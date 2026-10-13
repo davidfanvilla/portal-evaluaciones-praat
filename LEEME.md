@@ -1,19 +1,19 @@
 # Portal de evaluaciones PRAAT
 
-## Archivos
+## Contenido
 
-- `index.html`: página completa y editable. Contiene el diseño, los campos, los criterios, los cálculos y el gráfico.
-- `praat-logo.jpg`: logotipo usado en el encabezado.
+- `index.html`: portal completo y editable. La portada contiene tres opciones: evaluación de vuelo del alumno, supervisión del instructor en simulador y observación de buenas prácticas del instructor en teoría.
+- `praat-logo.jpg`: logotipo mostrado en la portada.
 
-## Editar el formato
+El tablero agrupa las evaluaciones de teoría y simulador por el campo **Instructor evaluado**. Cuando el mismo instructor tiene ambas modalidades, aparecen juntas en su ficha con resultados, historial y gráficas de barras por sección. La evaluación de vuelo mide el desempeño del alumno y se conserva como registro separado; no se mezcla con el puntaje del instructor.
 
-Abre `index.html` en un editor de texto. En el código busca `EDITA AQUÍ LOS FORMATOS`. El objeto `catalog` contiene los títulos, campos, criterios y secciones de cada evaluación. Puedes cambiar el texto directamente y guardar el archivo.
+## Editar el portal
 
-Los resultados actuales son descriptivos: calculan marcas `S` sobre las marcas `S` y `T` registradas. Los formatos de origen no proporcionan una ponderación oficial. En la supervisión de instructor, el encabezado de la tabla muestra `S / T`, mientras que la leyenda define `S / E`; el portal conserva las etiquetas originales y no les asigna una definición nueva.
+Abre `index.html` en un editor de texto. El HTML, CSS y JavaScript están en un solo archivo. Puedes cambiar títulos, campos, criterios, secciones, escalas, colores y cálculos directamente. Los criterios de las evaluaciones se transcribieron de los formatos entregados; los porcentajes ponderados de teoría siguen los pesos indicados en la guía. En los formatos de vuelo y simulador el portal presenta porcentajes descriptivos S ÷ (S+T), pues sus documentos no definen ponderación oficial. En la supervisión de simulador se mantienen las marcas originales sin reinterpretar la diferencia entre S/T y S/E que muestra el formato.
 
-## Datos de evaluación
+## Registros y privacidad
 
-Los registros se guardan localmente en el navegador del dispositivo. No se envían al sitio ni se sincronizan entre dispositivos. Usa **Descargar respaldo JSON** dentro de una evaluación para conservar o trasladar los registros.
+Las evaluaciones se guardan en el navegador y dispositivo donde se capturan. GitHub Pages publica el formulario, pero no recibe los registros ni los sincroniza entre dispositivos. Usa **Descargar respaldo JSON** para conservarlos o trasladarlos y **Importar respaldo JSON** para recuperarlos. La guía anterior permanece en su repositorio independiente; este portal también intenta importar una sola vez los registros previos que existan en ese mismo navegador.
 
-El portal está construido con HTML, CSS y JavaScript sin instalación de paquetes. Se puede abrir `index.html` directamente o publicar la carpeta en un hosting estático. Para que el logotipo aparezca, conserva `praat-logo.jpg` junto a `index.html`.
+Para publicar estáticamente, conserva `praat-logo.jpg` junto a `index.html`. El archivo se puede abrir directamente o editar y volver a publicar en GitHub Pages.
 
