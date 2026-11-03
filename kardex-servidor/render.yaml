@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: praat-kardex-piloto
+    runtime: docker
+    plan: 0.5c-512mb
+    region: oregon
+    branch: main
+    dockerfilePath: kardex-servidor/Dockerfile
+    dockerContext: kardex-servidor
+    rootDir: kardex-servidor
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    disk:
+      name: praat-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PRAAT_DATA_DIR
+        value: /var/data/praat
+      - key: PRAAT_SETUP_TOKEN
+        generateValue: true
+
